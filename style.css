@@ -52,8 +52,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  selection-background-color: var(--accent);
-  selection-color: #ffffff;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #ffffff;
 }
 
 body.locked {
@@ -97,6 +100,7 @@ h1, h2, h3 {
   letter-spacing: -0.05em;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: pulse 1.2s cubic-bezier(0.4, 0, 0.6, 1) infinite alternate;
 }
@@ -274,6 +278,7 @@ h1, h2, h3 {
 .hero h1 span:nth-child(2) {
   padding-left: clamp(1rem, 6vw, 5rem);
   background: var(--accent-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 8px 30px var(--accent-glow));
